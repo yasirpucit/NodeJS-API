@@ -4,7 +4,7 @@
 # production
 /dist
 /deploy
-
+.env
 # misc
 .DS_Store
 .vscode
