@@ -5,12 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node index.js",
-    "prod:setup": "mup setup --config=./deploy/mup.js",
-    "prod:deploy": "npm run prod:build && mup deploy --config=./deploy/mup.js",
-    "prod:reconfig": "mup reconfig --config=./deploy/mup.js",
-    "prod:logs": "mup logs --config=./deploy/mup.js --tail 1000 -f",
-    "prod:build": "rm -rf dist && webpack --config webpack.babel.js --progress",
-    "prod:start": "node ./dist/index.js"
+    "build": "npx --exec babel-node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -32,22 +27,17 @@
     "lodash": "^4.17.21",
     "mongoose": "^5.13.7",
     "morgan": "^1.10.0",
-    "mup": "^1.5.10",
-    "mup-node": "^0.8.2",
     "passport": "^0.4.1",
     "passport-custom": "^1.1.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "stripe": "^12.5.0",
-    "webpack": "^5.84.0",
-    "webpack-node-externals": "^3.0.0"
+    "stripe": "^12.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
     "eslint": "^5.0.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "nodemon": "^2.0.6",
-    "webpack-cli": "^5.1.1"
+    "nodemon": "^2.0.6"
   }
 }
