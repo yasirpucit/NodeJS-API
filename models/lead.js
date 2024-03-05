@@ -1,4 +1,4 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose, { Schema } from "mongoose";
 
 const schema = new Schema(
   {
@@ -12,12 +12,13 @@ const schema = new Schema(
     dob: { type: Date },
     contacts: { type: Number },
     email: { type: String },
-    notes: { type: String },
-  }, {
+    notes: { type: String }
+  },
+  {
     timestamps: true
   }
 );
 
-const Lead = mongoose.model('lead', schema);
+const Lead = mongoose.model("lead", schema);
 
 export default Lead;
